@@ -100,7 +100,7 @@ esp_err_t esp_lcd_new_panel_jd9165(const esp_lcd_panel_io_handle_t io, const esp
 #define JD9165_1024_600_PANEL_60HZ_DPI_CONFIG(px_format) \
     {                                                    \
         .dpi_clk_src = MIPI_DSI_DPI_CLK_SRC_DEFAULT,     \
-        .dpi_clock_freq_mhz = 50,                        \
+        .dpi_clock_freq_mhz = 51.2,                      \
         .virtual_channel = 0,                            \
         .pixel_format = px_format,                       \
         .num_fbs = 1,                                    \
@@ -108,11 +108,11 @@ esp_err_t esp_lcd_new_panel_jd9165(const esp_lcd_panel_io_handle_t io, const esp
             .h_size = 1024,                              \
             .v_size = 600,                               \
             .hsync_back_porch = 136,                     \
-            .hsync_pulse_width = 20,                     \
+            .hsync_pulse_width = 24,                     \
             .hsync_front_porch = 160,                    \
-            .vsync_back_porch = 12,                      \
+            .vsync_back_porch = 21,                      \
             .vsync_pulse_width = 2,                      \
-            .vsync_front_porch = 20,                     \
+            .vsync_front_porch = 12,                     \
         },                                               \
         .flags.use_dma2d = true,                         \
     }
